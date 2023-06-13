@@ -1,0 +1,9 @@
+<div *ngIf="todo">
+  <h1>{{ todo.title }}</h1>
+
+  <p>{{ todo.description }}</p>
+
+  <button [routerLink]="['/todos/edit', todo.id]">Edit</button>
+  <button (click)="deleteTodo(todo)">Delete</button>
+  <button [routerLink]="['/todos']">Back</button>
+</div>
